@@ -31,8 +31,8 @@ class login extends \Runtime\Controller {
     * Authentication controller
     */ function authenticate ($request, $response){
 
-		$user = $request->post['username']??null;
-		$pass = $request->post['password']??null;
+		$user = $request->post['username']?:null;
+		$pass = $request->post['password']?:null;
 
         $response->title = "Login";
 
