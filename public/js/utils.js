@@ -67,27 +67,30 @@
                 var head = document.getElementsByTagName('head')[0],
                     script = false;
 
-
                 switch(path.split('.').pop()){
 
                   case 'js':
-                    script = document.createElement('script');              
+                    script = '<script type="text/javascript" src="'+path+'"/>';
+                    /*script = document.createElement('script');              
                     script.type = 'text/javascript';
                     script.onload = onload||function(){};
-                    script.src = path;
+                    script.src = path;*/
                     break;
 
                   case 'css':
-                    script = document.createElement('link');              
+
+                    script = '<link type="text/css" rel="stylesheet" href="'+path+'"/>';
+/*                    script = document.createElement('link');              
                     script.type = "text/css";
                     script.rel = "stylesheet";
-                    script.href = path;
+                    script.href = path;*/
                     break;
 
                 }
 
                 if(script !== false){
-                  head.appendChild(script);
+
+                  head.innerHTML += script;
                 }
 
             }
