@@ -18,7 +18,7 @@ return [
 	],*/
     //'mongo' => [
     //	'user'=>'root',
-    //	'pass'=>'Gqr102652!',
+    //	'pass'=>'!!!!',
     //	'host'=>'192.168.0.91',
     //	'port'=>'27017',
     //	'database' => 'dcs'
