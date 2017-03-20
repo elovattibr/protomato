@@ -1,6 +1,6 @@
 #VENDOR
 data/*
-.sftp-config.json
+sftp-config.json
 
 
 # Compiled source #

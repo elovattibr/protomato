@@ -1,14 +1,8 @@
 <?php 
-//error_reporting(false);
 ob_start() or die('Output buffer is required.');
 session_start() or die('PHP Sessions are required.');
-//setlocale(LC_ALL, "pt_BR", "pt_BR.utf-8", "portuguese");
-//date_default_timezone_set('America/Sao_Paulo');
-
 
 #UNCOMMENT IF NGINX/APACHE NOT SETUP PROPERLY
-
-
 if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
     include('index.html');
     exit;
@@ -17,7 +11,6 @@ if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
 if (isset($_SERVER['REQUEST_URI']) && preg_match('/\.(?:png|jpg|jpeg|gif|css|js|map|json|min)$/', $_SERVER["REQUEST_URI"])) {
     return false;
 }
-
 
 function autoload($className, $dir=false) {
     
