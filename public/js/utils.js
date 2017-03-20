@@ -70,27 +70,23 @@
                 switch(path.split('.').pop()){
 
                   case 'js':
-                    script = '<script type="text/javascript" src="'+path+'"/>';
-                    /*script = document.createElement('script');              
+                    script = document.createElement('script');              
                     script.type = 'text/javascript';
                     script.onload = onload||function(){};
-                    script.src = path;*/
+                    script.src = path;
                     break;
 
                   case 'css':
-
-                    script = '<link type="text/css" rel="stylesheet" href="'+path+'"/>';
-/*                    script = document.createElement('link');              
+                    script = document.createElement('link');              
                     script.type = "text/css";
                     script.rel = "stylesheet";
-                    script.href = path;*/
+                    script.href = path;
                     break;
 
                 }
 
                 if(script !== false){
-
-                  head.innerHTML += script;
+                  head.appendChild(script);
                 }
 
             }
