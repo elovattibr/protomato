@@ -28,11 +28,11 @@ trait Menus {
 					continue;
 				}
 				
-				$title = $options['title'] ?? false;
+				$title = $options['title'] ?: false;
 
-				$label = $options['label'] ?? false;
+				$label = $options['label'] ?: false;
 
-				$icon  = $options['icon'] ?? false;
+				$icon  = $options['icon'] ?: false;
 
 				if(!$label && $title) {
 
