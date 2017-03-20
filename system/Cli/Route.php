@@ -27,9 +27,9 @@ class Route extends \ACL\Access {
         
     }
 
-    public function output($response){
+    public function trigger($response){
 
-        if (!autoload($this->controller)){ //, "system"
+        if (!autoload($this->controller)){
             exit("\nSystem controller '{$this->controller}' was not found.");
         }
 
@@ -37,9 +37,9 @@ class Route extends \ACL\Access {
             exit("\nSystem controller '{$this->controller}' do not has a method named '{$this->method}'.");
         }
 
-        $instance = new $this->controller($this);
+        $instance = new $this->controller;
 
-        return $instance($this->method, $this->request, $response);
+        return $instance($response);
     }    
 
   

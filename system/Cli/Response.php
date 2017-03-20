@@ -25,7 +25,7 @@ class Response {
     function __toString(){
 
         //Then let's instantiate the module that y've asked for
-        echo $this->route->output($this);
+        $this->route->trigger($this);
         
         return (string) ob_get_clean();
     }    
